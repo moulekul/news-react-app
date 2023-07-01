@@ -1,26 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import Title from './components/Title'
+import Nav from './components/Nav'
+import NewsGrid from './components/NewsGrid'
+
+
+import './App.css'
 
 function App() {
+  const [items, setItems] = useState([])
+  const [active, setActive] = useState(1)
+  const [category, setCategory] = useState("general")
+
+  useEffect(() => {
+    fetch(`https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=gb&apikey=73cc4993c3071bcc9cec1df74995e827`)
+    .then(res => res.json())
+    .then(data => setItems(data.articles))
+  }, [category])
+
   return (
     <div className="App">
-
-      <div className="header">
-        <header className="App-header">
-          <section></section>
-          <section className="title"></section>
-          <section></section>
-        </header>
-      </div>
-
-      <div className="site-content">
-        <main>
-          
-        </main>
-      </div>
-
+      <Title/>
+      <div className="heading-line1"></div>
+      <Nav active={active} setActive={setActive} setCategory={setCategory}/>
+      <div className="heading-line2"></div>
+      <div className="heading-line2"></div>
+      <NewsGrid items={items}/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
