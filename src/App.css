@@ -88,6 +88,9 @@ body {
   flex-direction: column;
 }
 
+.article:hover {
+  box-shadow: 1em #555;
+}
 
 .article:hover .article-title {
   color: grey;

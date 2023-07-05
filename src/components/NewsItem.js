@@ -4,7 +4,7 @@ function NewsItem({item}) {
 
 
     return (
-        <a href={item.url} target="_blank" className="article">
+        <a href={item.url} target="_blank" rel="noreferrer" className="article">
             
             <div className="article__title-container">
             

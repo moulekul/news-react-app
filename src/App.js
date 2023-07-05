@@ -12,7 +12,7 @@ function App() {
   const [category, setCategory] = useState("general")
 
   useEffect(() => {
-    fetch(`https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=gb&apikey=73cc4993c3071bcc9cec1df74995e827`)
+    fetch(`https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=gb&apikey=${process.env.REACT_APP_API_KEY}`)
     .then(res => res.json())
     .then(data => setItems(data.articles))
   }, [category])
