@@ -2,7 +2,6 @@ function NewsItem({item}) {
     const websiteUrl = item.url
     const website = websiteUrl.split('https://').pop().split('/')[0]
 
-
     return (
         <a href={item.url} target="_blank" rel="noreferrer" className="article">
             

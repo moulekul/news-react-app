@@ -1,5 +1,3 @@
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -63,7 +61,6 @@ body {
   font-size: 0.9em;
   border-radius: 3em;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .news-grid {
@@ -78,18 +75,14 @@ body {
 }
 
 .article {
+  display: flex;
   background: #fff;
   overflow: hidden;
   text-decoration: none;
   color: #000;
   padding-bottom: 0.5em;
   transition: 0.3s;
-  display: flex;
   flex-direction: column;
-}
-
-.article:hover {
-  box-shadow: 1em #555;
 }
 
 .article:hover .article-title {
