@@ -106,7 +106,7 @@ body {
   position: relative;
   margin: 0.5em 0em;
   overflow: hidden;
-  height: 15em;
+  height: 25em;
 }
 
 .article-image img {
@@ -141,6 +141,10 @@ body {
   .news-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .article-image {
+    height: 17em;
+  }
 }
 
 @media screen and (min-width: 1070px) {
@@ -152,7 +156,12 @@ body {
     margin: auto;
     max-width: 1200px;
   }
+
   .news-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .article-image {
+    height: 15em;
   }
 }
