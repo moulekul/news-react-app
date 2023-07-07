@@ -1,5 +1,7 @@
 # React News App
 
+A react news app utilising the GNews API hosted on Netlify.
+
 ## What I Learned
 
 - How to use the Fetch API inside React

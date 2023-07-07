@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Title from './components/Title'
 import Nav from './components/Nav'
 import NewsGrid from './components/NewsGrid'
-
-
 import './App.css'
 
 function App() {
